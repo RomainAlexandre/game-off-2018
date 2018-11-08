@@ -1,3 +1,8 @@
+import tileset from '../../../assets/pokemon_like/tilesets/tuxmon-sample-32px.png';
+import tilemap from '../../../assets/pokemon_like/tilemaps/my_little_town.json';
+import atlasPng from '../../../assets/pokemon_like/atlas/atlas.png';
+import atlasJson from '../../../assets/pokemon_like/atlas/atlas.json';
+
 import Phaser from "phaser";
 
 const config = {
@@ -29,9 +34,9 @@ let graphics;
 let aaa;
 
 function preload() {
-    this.load.image("tiles", "../assets/pokemon_like/tilesets/tuxmon-sample-32px.png");
-    this.load.tilemapTiledJSON("map", "../assets/pokemon_like/tilemaps/my_little_town.json");
-    this.load.atlas("atlas", "../assets/pokemon_like/atlas/atlas.png", "./tests_games/pokemon_like/assets/atlas/atlas.json");
+    this.load.image("tiles", tileset);
+    this.load.tilemapTiledJSON("map", tilemap);
+    this.load.atlas("atlas", atlasPng, atlasJson);
 }
 
 function create() {

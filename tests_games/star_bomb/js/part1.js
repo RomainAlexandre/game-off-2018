@@ -1,3 +1,9 @@
+import sky from '../../../assets/star_bomb/sky.png';
+import ground from '../../../assets/star_bomb/platform.png';
+import star from '../../../assets/star_bomb/star.png';
+import bomb from '../../../assets/star_bomb/bomb.png';
+import dude from '../../../assets/star_bomb/dude.png';
+
 import Phaser from "phaser";
 
 var config = {
@@ -25,13 +31,13 @@ var scoreText;
 
 function preload ()
 {
-    this.load.image('sky', '../assets/star_bomb/sky.png');
-    this.load.image('ground', '../assets/star_bomb/platform.png');
-    this.load.image('star', '../assets/star_bomb/star.png');
-    this.load.image('bomb', '../assets/star_bomb/bomb.png');
+    this.load.image('sky', sky);
+    this.load.image('ground', ground);
+    this.load.image('star', star);
+    this.load.image('bomb', bomb);
     this.load.spritesheet(
         'dude',
-        './tests_games/star_bomb/assets/dude.png',
+        dude,
         { frameWidth: 32, frameHeight: 48 }
     );
 }

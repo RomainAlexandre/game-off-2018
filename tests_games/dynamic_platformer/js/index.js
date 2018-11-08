@@ -1,3 +1,6 @@
+import tileset from '../../../assets/dynamic_platformer/tilesets/0x72-industrial-tileset-32px-extruded.png';
+import tilemap from '../../../assets/dynamic_platformer/tilemaps/platformer.json';
+
 import Phaser from "phaser";
 
 const config = {
@@ -23,8 +26,8 @@ const game = new Phaser.Game(config);
 let groundLayer;
 
 function preload() {
-  this.load.image("tiles", "../assets/dynamic_platformer/tilesets/0x72-industrial-tileset-32px-extruded.png");
-  this.load.tilemapTiledJSON("map", "../assets/dynamic_platformer/tilemaps/platformer.json");
+  this.load.image("tiles", tileset);
+  this.load.tilemapTiledJSON("map", tilemap);
 }
 
 function create() {
