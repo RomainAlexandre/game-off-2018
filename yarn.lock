@@ -558,6 +558,12 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@mikewesthad/dungeon@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@mikewesthad/dungeon/-/dungeon-1.2.2.tgz#0ba275fd2124e8f76b5b4d45c1c5f437e8b5b960"
+  dependencies:
+    seedrandom "^2.4.3"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -3686,6 +3692,10 @@ safer-eval@^1.2.3:
 sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+
+seedrandom@^2.4.3:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/seedrandom/-/seedrandom-2.4.4.tgz#b25ea98632c73e45f58b77cfaa931678df01f9ba"
 
 semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.6.0:
   version "5.6.0"
