@@ -2,15 +2,14 @@
   "name": "@totoro/game.off",
   "version": "0.0.1",
   "description": "My first game",
-  "author": "Bros",
-  "main": "source/index.js",
+  "main": "index.js",
   "engines": {
     "node": "^8.0.0",
     "yarn": "^1.6.0"
   },
   "scripts": {
-    "start": "http-server",
-    "build": "NODE_ENV=production S3_RELEASE=true webpack --config webpack.config.js"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,10 @@
   },
   "homepage": "https://github.com/RomainAlexandre/game-off-2018#readme",
   "dependencies": {
-    "http-server": "^0.11.1",
+    "@mikewesthad/dungeon": "^1.2.2",
     "phaser": "^3.15.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
   }
 }
