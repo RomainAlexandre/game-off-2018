@@ -18,9 +18,9 @@ export default class Player {
     });
 
     this.sprite = scene.physics.add
-      .sprite(x, y, "characters", 0)
-      .setSize(22, 33)
-      .setOffset(23, 27);
+      .sprite(x, y, "characters", 0);
+/*    .setSize(48, 48)
+      .setOffset(23, 27);*/
 
     this.sprite.anims.play("player-walk-back");
 
