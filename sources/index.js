@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import DungeonScene from "./dungeon_scene.js";
 
 const config = {
   type: Phaser.AUTO,
@@ -8,7 +9,7 @@ const config = {
   parent: "game-container",
   pixelArt: true,
   // TODO Create our own new Scene
-  // scene: DungeonScene,
+  scene: DungeonScene,
   physics: {
     default: "arcade",
     arcade: {

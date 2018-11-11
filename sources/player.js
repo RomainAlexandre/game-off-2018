@@ -3,26 +3,26 @@ export default class Player {
     this.scene = scene;
 
     // TODO Create new anims based on the new sprite we will pick
-    // const anims = scene.anims;
-    // anims.create({
-    //   key: "player-walk",
-    //   frames: anims.generateFrameNumbers("characters", { start: 46, end: 49 }),
-    //   frameRate: 8,
-    //   repeat: -1
-    // });
-    // anims.create({
-    //   key: "player-walk-back",
-    //   frames: anims.generateFrameNumbers("characters", { start: 65, end: 68 }),
-    //   frameRate: 8,
-    //   repeat: -1
-    // });
+    const anims = scene.anims;
+    anims.create({
+      key: "player-walk",
+      frames: anims.generateFrameNumbers("characters", { start: 2, end: 3 }),
+      frameRate: 8,
+      repeat: -1
+    });
+    anims.create({
+      key: "player-walk-back",
+      frames: anims.generateFrameNumbers("characters", { start: 0, end: 1 }),
+      frameRate: 8,
+      repeat: -1
+    });
 
-    // this.sprite = scene.physics.add
-    //   .sprite(x, y, "characters", 0)
-    //   .setSize(22, 33)
-    //   .setOffset(23, 27);
+    this.sprite = scene.physics.add
+      .sprite(x, y, "characters", 0)
+      .setSize(22, 33)
+      .setOffset(23, 27);
 
-    // this.sprite.anims.play("player-walk-back");
+    this.sprite.anims.play("player-walk-back");
 
     this.keys = scene.input.keyboard.createCursorKeys();
   }
@@ -61,17 +61,17 @@ export default class Player {
 
     // TODO Update animations based on the ones created above
     // Update the animation last and give left/right/down animations precedence over up animations
-    // if (keys.left.isDown || keys.right.isDown || keys.down.isDown) {
-    //   sprite.anims.play("player-walk", true);
-    // } else if (keys.up.isDown) {
-    //   sprite.anims.play("player-walk-back", true);
-    // } else {
-    //   sprite.anims.stop();
+    if (keys.left.isDown || keys.right.isDown || keys.down.isDown) {
+      sprite.anims.play("player-walk", true);
+    } else if (keys.up.isDown) {
+      sprite.anims.play("player-walk-back", true);
+    } else {
+      sprite.anims.stop();
 
-    //   // If we were moving & now we're not, then pick a single idle frame to use
-    //   if (prevVelocity.y < 0) sprite.setTexture("characters", 65);
-    //   else sprite.setTexture("characters", 46);
-    // }
+    // If we were moving & now we're not, then pick a single idle frame to use
+    if (prevVelocity.y < 0) sprite.setTexture("characters", 0);
+    else sprite.setTexture("characters", 2);
+    }
   }
 
   destroy() {
